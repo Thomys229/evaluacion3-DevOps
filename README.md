@@ -684,9 +684,12 @@ version00/
 
 ## Reflexiones individuales
 
-### Integrante 1
+### Integrante 1 Thomás Osorio
+El pipeline funciona perfecto en las fases de calidad (SonarQube/Snyk), construcción y tests. El despliegue falla en el último paso (Deploy a EKS) debido a la política de seguridad voc-cancel-cred propia del entorno de AWS Academy, que bloquea explícitamente despliegues automáticos.
 
-> *[Escribir aquí la reflexión personal sobre el aprendizaje obtenido en este proyecto: qué fue lo más desafiante, qué conceptos de DevOps quedaron más claros, y cuál fue tu contribución específica al equipo. Mínimo 150 palabras. Sin uso de IA.]*
+Esto confirma que mi configuración de autenticación es correcta, pero el laboratorio restringe los permisos de IAM por diseño. La aplicación y los dashboards de observabilidad han sido validados manualmente y están operativos. Adjunto en el README la evidencia de las pruebas y la justificación técnica de la restricción del entorno
+
+Este trabajo fue un buen desafío para conectar todas las piezas de DevOps (EKS, GitHub Actions y observabilidad). Lo que más aprendí fue a tratar frustrarme cuando el pipeline se detenía; entender que el bloqueo por la política voc-cancel-cred de AWS Academy no era un error mío, sino una restricción de seguridad real del entorno, fue clave para mi aprendizaje. Más allá de configurar herramientas, me llevo la capacidad de diagnosticar bloqueos y justificar técnicamente por qué el entorno se comporta así. Me quedo con la práctica en monitoreo con CloudWatch y cómo las validaciones de calidad (SonarQube/Snyk) son fundamentales para entregar un código seguro y profesional.
 
 ### Integrante 2
 
